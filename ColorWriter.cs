@@ -39,8 +39,8 @@
             {
                 Console.Write(c);
             }
-            Console.Write("\n");
             Console.ResetColor();
+            Console.Write("\n");
         }
 
         static public void MatrixLine(string output){

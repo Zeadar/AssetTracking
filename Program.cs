@@ -1,4 +1,12 @@
 ﻿using AssetTracking;
+using System.Runtime.InteropServices;
+
+if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+{
+    Console.SetWindowSize(175, 40);
+    Console.SetBufferSize(175, 40);
+	ColorWriter.GreenLine("Windows detected! Resized command prompt for your convenience! :)");
+}
 
 Office sweden = new Office("Sweden", Currency.SEK);
 Office usa = new Office("USA", Currency.USD);

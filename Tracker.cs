@@ -20,6 +20,7 @@ namespace AssetTracking{
 				 + "Model".PadRight(25) + "Price (USD)".PadRight(25)
 				 + "Price (Local)".PadRight(25) + "Purchase Date".PadRight(25));
 			Console.ResetColor();
+			//Console.WriteLine(); //This 
 			foreach (Asset asset in sortedAssets){
 				DateTime expiryDate = asset.DatePurchased.AddYears(3);
 				DateTime redDate = asset.DatePurchased.AddYears(2).AddMonths(9);
