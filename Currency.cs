@@ -2,9 +2,7 @@ namespace AssetTracking{
  	public enum Currency{
 		SEK,
 		USD,
-		EUR,
-		KGS,
-		VND,
+		EUR
 	}
 
 	public class Converter{
@@ -18,8 +16,6 @@ namespace AssetTracking{
 		static readonly Dictionary<Currency, double> exchangeRate = new Dictionary<Currency, double>() {
 			{Currency.SEK, 0.0950043},
 			{Currency.EUR, 1.08365},
-			{Currency.KGS, 0.0114025},
-			{Currency.VND, 25664.465},
 			{Currency.USD, 1.0},
 		};
 

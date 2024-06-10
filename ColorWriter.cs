@@ -1,4 +1,4 @@
-﻿namespace Checkpoint2
+﻿namespace AssetTracking
 {
     internal class ColorWriter
     {
@@ -18,27 +18,33 @@
             Console.ResetColor();
         }
 
-		static public void YellowPrompt(string input){
+		static public string YellowPrompt(string query){
             Console.ResetColor();
 			Console.ForegroundColor = ConsoleColor.Yellow;
-			Console.Write(input.PadLeft(25));
+			Console.Write(query.PadLeft(25));
 			Console.Write(" > ");
 			Console.ResetColor();
+            string input = Console.ReadLine() ?? "";
+            return input.Trim().ToUpper();
 		}
 
         //Turns out Console.WriteLine with background
         //color is buggy af
-        static public void MatrixLine(string input) 
+        static public void MatrixLine(string output, ConsoleColor color) 
         {
             Console.ResetColor();
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.ForegroundColor = ConsoleColor.White;
-            foreach (char c in input)
+            Console.ForegroundColor = color;
+            foreach (char c in output)
             {
                 Console.Write(c);
             }
             Console.Write("\n");
             Console.ResetColor();
+        }
+
+        static public void MatrixLine(string output){
+            MatrixLine(output, ConsoleColor.White);
         }
     }
 }
