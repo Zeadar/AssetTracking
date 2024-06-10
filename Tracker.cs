@@ -27,7 +27,7 @@ namespace AssetTracking{
 				DateTime yellowDate = asset.DatePurchased.AddYears(2).AddMonths(6);
 				if (expiryDate < DateTime.Now){
 					//Expired
-					ColorWriter.MatrixLine(asset.ToString(), ConsoleColor.Blue);
+					ColorWriter.MatrixLine(asset.ToString(), ConsoleColor.Black);
 				} else if ( redDate < DateTime.Now){
 					//Expires in 3 months
 					ColorWriter.MatrixLine(asset.ToString(), ConsoleColor.Red);

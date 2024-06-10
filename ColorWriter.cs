@@ -33,7 +33,7 @@
         static public void MatrixLine(string output, ConsoleColor color) 
         {
             Console.ResetColor();
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.ForegroundColor = color;
             foreach (char c in output)
             {
